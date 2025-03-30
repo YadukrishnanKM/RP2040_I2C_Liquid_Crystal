@@ -37,7 +37,7 @@ This library is a Raspberry Pi Pico SDK implementation of the popular Arduino Li
 ## Installation
 1. Clone this repository into your Pico SDK project:
    ```sh
-   git clone https://github.com/your-repo/LiquidCrystal_I2C_Pico.git
+   git clone https://github.com/YadukrishnanKM/RP2040_I2C_Liquid_Crystal
    ```
 2. Add the library to your `CMakeLists.txt`:
    ```cmake
