@@ -163,7 +163,7 @@ int main() {
 ## Contribution & Feedback
 Contributions are welcome! Please open an issue or submit a pull request with improvements.
 
-For feedback, please reach out via GitHub or email: `your.email@example.com`.
+For feedback, please reach out via GitHub or email: `kmyadukrishnan92@gmail.com`.
 
 ---
 
