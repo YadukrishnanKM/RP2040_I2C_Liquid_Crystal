@@ -41,7 +41,7 @@ This project demonstrates the use of the Raspberry Pi Pico (RP2040) for real-tim
 ```sh
   git clone https://github.com/YadukrishnanKM/RP2040_I2C_Liquid_Crystal/tree/main/example
 ```
-**Note:** or else *(Recommended)* you can procide with normal setup of above normal [CMAKE](https://github.com/YadukrishnanKM/RP2040_I2C_Liquid_Crystal/blob/main/example/CMakeLists.txt) file
+> **Note (Recommended):** or else you can proceed with normal setup of above normal [CMAKE](https://github.com/YadukrishnanKM/RP2040_I2C_Liquid_Crystal/blob/main/example/CMakeLists.txt) file
 ### 2. CMake Configuration
 Add the following `CMakeLists.txt` file in your project directory:
 ```cmake
@@ -74,7 +74,7 @@ cmake ..
 make -j4
 picotool load -f RP2040_RTC_Interrupts.uf2
 ```
-**Note (Recommended):** or else you can procide with normal setup 
+> **Note (Recommended):** in case of dysfunctionality  you can proceed with normal setup 
 
 ## Example Code Usage
 ```cpp
