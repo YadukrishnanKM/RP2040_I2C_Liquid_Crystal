@@ -9,7 +9,7 @@
 #ifndef LIQUID_CRYSTAL_RP_HPP_
 #define LIQUID_CRYSTAL_RP_HPP_
 
-#include "../src/Liquid_Crystal_RP.cpp"
+#include "Liquid_Crystal_RP.cpp"
 
 // commands
 #define LCD_CLEARDISPLAY 0x01
