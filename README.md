@@ -36,15 +36,23 @@ This library is a Raspberry Pi Pico SDK implementation of the popular Arduino Li
 
 ## Installation
 1. Clone this repository into your Pico SDK project:
-   ```sh
+   ```powershell
    git clone https://github.com/your-repo/LiquidCrystal_I2C_Pico.git
    ```
-2. Add the library to your `CMakeLists.txt`:
+2. Create a lib folder and add this `CMakeLists.txt` in it
    ```cmake
-   add_subdirectory(LiquidCrystal_I2C_Pico)
-   target_link_libraries(your_project_name PRIVATE LiquidCrystal_I2C_Pico)
+   add_subdirectory(Liquid_Crystal_RP)
+   add_library(lib INTERFACE)
+   target_link_libraries(lib INTERFACE Liquid_Crystal_RP)
+   target_include_directories(lib INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/Liquid_Crystal_RP)
    ```
-3. Include the header in your project:
+
+3. Add the library to your `CMakeLists.txt`:
+   ```cmake
+   add_subdirectory(lib)
+   target_link_libraries(your_project_name PRIVATE Liquid_Crystal_RP)
+   ```
+4. Include the header in your project:
    ```cpp
    #include "Liquid_Crystal_RP.hpp"
    ```
@@ -60,10 +68,12 @@ project(LiquidCrystal_I2C_Pico)
 
 pico_sdk_init()
 
-add_library(LiquidCrystal_I2C_Pico STATIC Liquid_Crystal_RP.cpp)
+add_executable(${PROJECT_NAME} src/main.cpp)
+
+add_subdirectory(lib)
 
 # Link with Pico SDK
-target_link_libraries(LiquidCrystal_I2C_Pico pico_stdlib hardware_i2c)
+target_link_libraries(LiquidCrystal_I2C_Pico pico_stdlib Liquid_Crystal_RP)
 
 # Add include directories
 target_include_directories(LiquidCrystal_I2C_Pico PUBLIC ${CMAKE_CURRENT_LIST_DIR})
