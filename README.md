@@ -73,10 +73,7 @@ add_executable(${PROJECT_NAME} src/main.cpp)
 add_subdirectory(lib)
 
 # Link with Pico SDK
-target_link_libraries(LiquidCrystal_I2C_Pico pico_stdlib Liquid_Crystal_RP)
-
-# Add include directories
-target_include_directories(LiquidCrystal_I2C_Pico PUBLIC ${CMAKE_CURRENT_LIST_DIR})
+target_link_libraries(${PROJECT_NAME} pico_stdlib Liquid_Crystal_RP)
 ```
 
 ## API Reference
